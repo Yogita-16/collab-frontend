@@ -8,7 +8,7 @@ export default function TaskList({ projectId }) {
 
   useEffect(() => {
     fetchAllTasks();
-  }, []);
+  }, [fetchAllTasks]); // ✅ ADD fetchAllTasks
 
   const projectTasks = projectId
     ? tasks.filter((task) => task.projectId === projectId)

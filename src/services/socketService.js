@@ -123,4 +123,5 @@ class SocketService {
   }
 }
 
-export default new SocketService();
+const socketService = new SocketService(); // ✅ ASSIGN to variable
+export default socketService;

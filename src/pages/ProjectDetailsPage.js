@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { projectService } from "../services/projectService";
 import { useTaskStore } from "../store/taskStore";
 import socketService from "../services/socketService";
-import FileUpload from "../components/FileUpload";
 import TaskList from "../components/TaskList";
 import TaskForm from "../components/TaskForm";
 import "../styles/Page.css";
@@ -15,7 +14,7 @@ export default function ProjectDetailsPage() {
   const [loading, setLoading] = useState(true);
   const [showTaskForm, setShowTaskForm] = useState(false);
   const [refreshKey, setRefreshKey] = useState(0);
-  const [error, setError] = useState("");
+  const [error] = useState("");
   const { user } = useTaskStore();
 
   useEffect(() => {
